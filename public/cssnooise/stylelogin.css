@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f1e9; /* Warna krem background atas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fbf8f3; /* Premium solid cream color */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Logo */
+.logo-top {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+}
+
+.logo-top h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: -0.04em;
+    color: #2c1a0e;
+    user-select: none;
+}
+
+.logo-top h1 span {
+    color: #63422d;
+    letter-spacing: -0.08em;
+}
+
+/* Background Collage at the bottom */
+.gambarutama {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 52vh; /* Bottom half collage */
+    z-index: 0;
+    overflow: hidden;
+}
+
+.gambarutama img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* White-to-transparent fade overlay for collage blending */
+.gambarbayangan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 52vh;
+    background: linear-gradient(to bottom, #fbf8f3 0%, rgba(251, 248, 243, 0.4) 40%, rgba(251, 248, 243, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Card Utama */
+.login-card {
+    background-color: #63422d; /* Warna cokelat box */
+    padding: 40px 50px;
+    border-radius: 40px;
+    width: 90%;
+    max-width: 580px;
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+}
+
+.login-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.signup-text {
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.signup-text a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Input Styles */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 30px;
+    border: none;
+    background-color: #fdf8f0;
+    font-size: 1rem;
+    color: #63422d;
+    outline: none;
+}
+
+/* Checkbox & Forgot Password */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+.remember-me {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remembertext{
+    text-decoration: none;
+}
+
+.remember-me input {
+    text-decoration: none;
+    margin-right: 8px;
+    accent-color: #fff;
+}
+
+.forgot-password {
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+}
+
+/* Login Button */
+.btn-login {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: #fdf8f0;
+    color: #63422d;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #fff;
+    transform: scale(1.02);
+}
+
+/* Social Media Section */
+.social-text {
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-icons .facebook { color: #1877f2; }
+.social-icons .google { color: #ea4335; }
+.social-icons .twitter { color: #1da1f2; }
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
